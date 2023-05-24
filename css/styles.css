@@ -1,0 +1,137 @@
+/*Roboto, Orbitron Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+:root{
+  /*colors*/
+  --col-white:rgba(255,255,255,1); 
+  --col-input-background:#c9646417;
+  --col-input-border:#868BA1;
+  --col-dark-blue:#1F2543;
+  --col-background: #DEDEF4;
+
+  /*fonts*/
+  --orbitron:'Orbitron', sans-serif;
+  --roboto:'Roboto', sans-serif;
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+button:hover{
+  cursor: pointer;
+}
+body{
+  width: 100%;
+  color: var(--col-white);
+  font-family: var(--roboto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(130deg, #000000 41%, #005288 60%);
+  text-align: center;
+  align-items: center;
+  padding: 3rem 2rem 2rem 2rem;
+}
+
+/*LOGO*/
+.logo{
+  max-width: 220px;
+}
+/*MAIN TITLE*/
+.main-title{
+  font-size: 4rem;
+  font-weight: 700;
+  margin-block: 2rem;
+  font-family: var(--orbitron);
+}
+/*APPLY BUTTON*/
+.apply-btn{
+  padding: 0.7rem 3rem;
+  border-radius: 33px;
+  font-weight: bold;
+  font-size: 0.89rem;
+  font-family: var(--roboto);
+  text-transform: uppercase;
+  background-color: black;
+  border: 2px outset #2196F3;
+  color: #2196F3;
+  transition: all 0.7s ease-in-out;
+}
+.apply-btn:hover{
+  border: 2px solid #ffffff;
+  color: var(--col-white);
+  background-color: transparent;
+}
+/*TERMS AND CONDITIONS*/
+#terms-and-conditions{
+  border: none;
+  background-color: transparent;
+  color: rgb(161 152 152);
+  font-size: 1rem;
+  margin-block: 2rem;
+}
+/*CIRCLE*/
+.circle{
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background-image: url(../images/galaxy.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  top: 50%;
+  box-shadow: 20px 9px 30px #ffffff57, inset 62px 28px 43px rgba(0,0,0,0.8);
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media screen and (max-width:1024px ) and ( max-height:600px) {
+  .circle{
+    top: 58%;
+  }
+}
+@media screen and (max-width:900px ) {
+ 
+  .main-title{
+    font-size: 3rem;
+    line-break: auto;
+  }
+}
+@media screen and (max-width:600px) {
+  .main-title{
+    font-size: 3rem;
+  } 
+  .circle{
+    top: 55%;
+  }
+}
+@media screen and (max-width:470px ) {
+  .logo{
+    width: 155px;
+  }
+  .main-title{
+    font-size: 2rem; 
+    width: 100%;
+  } 
+  .circle{
+    top: 55%;
+  }
+  .apply-btn{
+    padding: 0.7rem 2rem;
+    font-size: 0.89rem;
+  }
+  #terms-and-conditions{
+    margin-block: 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+
